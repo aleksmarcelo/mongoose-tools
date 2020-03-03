@@ -1,0 +1,31 @@
+{
+
+  "wifi": {
+    "sta": {
+      "enable": true,
+      "ssid": "test",
+      "pass": "12345678"
+    },
+    "ap": {
+      "enable": true,
+      "ssid": "esp32",
+      "pass": "12345678"
+    }
+  },
+
+  "rpc": {
+    "uart": {
+      "baud_rate": 921600,
+    }
+  },
+
+   "device": {
+       "hw": {
+         "pins": {
+           "led" : 4
+         }
+ 
+       }
+   }
+
+}

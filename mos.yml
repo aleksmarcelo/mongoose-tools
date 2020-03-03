@@ -1,0 +1,40 @@
+author: Marcelo Aleksandravicius
+description: Mongoose project skeleton
+# arch: PLATFORM
+version: 1.0
+manifest_version: 2020-02-25
+libs_version: ${mos.version}
+modules_version: ${mos.version}
+mongoose_os_version: ${mos.version}
+
+build_vars: 
+  #Defines the fs size (see https://github.com/cesanta/mongoose-os/blob/master/platforms/esp32/Makefile.build )
+  MGOS_ROOT_FS_SIZE: 350000
+
+config_schema:
+  - ["mqtt.server", "iot.eclipse.org:1883"]
+  - ["i2c.enable", true]
+  # Device config (sample)
+  - ["device", "o", {title: "Device"}]
+  - ["device.hw", "o", {title: "hardware config"}]
+  - ["device.hw.pins", "o", {title: "pins"}]
+  - ["device.hw.pins.led", "i", -1, {title: "Led"}] #defined em conf1.json
+
+tags:
+  - js
+
+sources:
+  - src
+filesystem:
+  - fs
+
+libs:
+  #Minimum libs needed to work with file transfer
+  - origin: https://github.com/mongoose-os-libs/boards
+  - origin: https://github.com/mongoose-os-libs/mjs
+  - origin: https://github.com/mongoose-os-libs/wifi
+  - origin: https://github.com/mongoose-os-libs/rpc-uart
+  - origin: https://github.com/mongoose-os-libs/rpc-service-fs
+  - origin: https://github.com/mongoose-os-libs/rpc-service-config
+  - origin: https://github.com/mongoose-os-libs/rpc-loopback
+

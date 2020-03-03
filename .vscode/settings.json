@@ -1,0 +1,22 @@
+{
+  //https: //marketplace.visualstudio.com/items?itemName=edonet.vscode-command-runner
+  "command-runner": {
+    "showRunCommandInEditorContextMenu": "false",
+    "commands": {
+      "mos reboot": "mos call Sys.Reboot",
+      "mos2 - watch fs directory": "${workspaceFolder}/scripts/watch.sh fs",
+      "mos2 - reboot": "mos2 call Sys.Reboot",
+    }
+  },
+  //
+  //sets the environment variable  where scripts are located
+  "terminal.integrated.env.linux": {
+    "MOS_SCRIPTS": "${workspaceFolder}/scripts"
+  },
+  //
+  //On each terminal open (bash), Will first run the script to set up the aliases. 
+  "terminal.integrated.shellArgs.linux": [
+    "--init-file",
+    "${workspaceFolder}/scripts/aliases.sh",
+  ],
+}
