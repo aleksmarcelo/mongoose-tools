@@ -2,10 +2,12 @@ author: Marcelo Aleksandravicius
 description: Mongoose project skeleton
 # arch: PLATFORM
 version: 1.0
-manifest_version: 2020-02-25
+manifest_version: 2017-09-29
 libs_version: ${mos.version}
 modules_version: ${mos.version}
 mongoose_os_version: ${mos.version}
+platform: esp8266 #esp32
+board: esp8266-1M 
 
 build_vars: 
   #Defines the fs size (see https://github.com/cesanta/mongoose-os/blob/master/platforms/esp32/Makefile.build )

@@ -5,8 +5,8 @@ SECONDS=0  #to count the time
 
 
 
-# --no-libs-update : Não atualiza as libs 
- mos build $1 --platform esp32 --no-libs-update  \
+# --no-libs-update : Não atualiza as libs --platform esp32/esp8266 (mos.yml)
+ mos build $1  --no-libs-update  \
   --deps-dir deps   \
   --binary-libs-dir LIBS \
  --local --repo ~/zephyr/mongoose-os \
