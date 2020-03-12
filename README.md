@@ -1,4 +1,4 @@
-# Micro controller development with mongoose-os and super powers!
+# IOT development with mongoose-os and super powers!
 
 [TOC]
 
